@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    {{ title }}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li *ngFor="let item of items" class="list-group-item" (click)="toggleItem(item)">
+      <span class="icon oi" [ngClass]="{ 'oi-check': item.done, 'oi-x': !item.done }"></span>
+      <span class="description">{{ item.description }}</span>
+    </li>
+  </ul>
+</div>
